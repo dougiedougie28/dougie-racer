@@ -1,0 +1,23 @@
+h1 {
+    font-size: 200px;  
+    color: black;  
+    text-align: center;
+}
+a {
+    font-size: 75px;
+    color: black;   
+}
+p {
+    text-align: center;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/yay.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}

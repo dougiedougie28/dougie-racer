@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>cars</title>
+                 <link rel="stylesheet" href="car.css">
+                 <script src="car.js"></script>
+    </head>
+    <body style="background-color: white; color: black">
+                <p><a href="http://127.0.0.1:5500/index.html"><b>Back</b></a></p>
+                    <h1>CHOOSE YOUR CAR</h1>
+<button onclick="pickCar('red')">Red Car</button>
+<button onclick="pickCar('orange')">Orange Car</button>
+<button onclick="pickCar('green')">Green Car</button>
+<button onclick="pickCar('blue')">Blue Car</button>
+<button onclick="pickCar('purple')">Purple Car</button>
+<button onclick="pickCar('pink')">Pink Car</button>
+<p id="picked">no car picked yet</p>
+<button onclick="startRace()">START RACE</button>
+<img src="images/racingcar.png" width="750" class="car"></img> 
+<img src="images/orangecar.png" width="750" class="car"></img> 
+<img src="images/greencar.png" width="750" class="car"></img> 
+<img src="images/bluecar.png" width="750" class="car"></img> 
+<img src="images/purplecar.png" width="750" class="car"></img> 
+<img src="images/pinkcar.png" width="750" class="car"></img>
+<script>
+let selectedCar = "red";
+
+function chooseCar(car) {
+    selectedCar = car;
+}
+
+function startRace() {
+    localStorage.setItem("selectedCar", selectedCar);
+    window.location.href = "race.html";
+}
+</script>
+</body>
+</html>
