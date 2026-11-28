@@ -1,2 +1,6 @@
 let color = localStorage.getItem("selectedCar")
-document.querySelector("#yourCar").textContent = "your car: " + color
+if (color === null){
+    document.querySelector("#yourCar").textContent = "No car picked yet"
+} else {
+    document.querySelector("#yourCar").textContent = "Your car: " + color
+}
