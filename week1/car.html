@@ -24,12 +24,15 @@
 <script>
 let selectedCar = "red";
 
-function chooseCar(car) {
-    selectedCar = car;
+function pickCar(color){
+    let message="you picked: " + color
+    document.querySelector("#picked").textContent = message
+    console.log(message)
+    localStorage.setItem("selectedCar", color);
 }
 
 function startRace() {
-    localStorage.setItem("selectedCar", selectedCar);
+    
     window.location.href = "race.html";
 }
 </script>
